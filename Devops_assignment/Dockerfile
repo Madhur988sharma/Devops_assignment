@@ -7,7 +7,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Devops_assignment/Devops_assignment.csproj", "Devops_assignment/"]
+COPY . .
 RUN dotnet restore "./Devops_assignment/./Devops_assignment.csproj"
 COPY . .
 WORKDIR "/src/Devops_assignment"
